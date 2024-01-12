@@ -10,7 +10,7 @@ spec:
         type: LoadBalancer
   nodeSets:
   - name: default
-    count: 6
+    count: 3
     podTemplate:
       spec:
         nodeSelector:
@@ -25,8 +25,8 @@ spec:
           - name: elasticsearch
             resources:
               limits:
-                memory: 64Gi
-                cpu: 16
+                memory: 32Gi
+                cpu: 8
     volumeClaimTemplates:
     - metadata:
         name: elasticsearch-data
@@ -35,7 +35,7 @@ spec:
         - ReadWriteOnce
         resources:
           requests:
-            storage: 600Gi
+            storage: 100Gi
 ---
 apiVersion: kibana.k8s.elastic.co/v1
 kind: Kibana
