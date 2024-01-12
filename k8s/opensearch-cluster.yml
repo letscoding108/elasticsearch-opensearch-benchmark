@@ -41,7 +41,7 @@ spec:
       replicas: 3
       nodeSelector:
         cloud.google.com/gke-nodepool: opensearch-nodepool-32
-      diskSize: "500Gi"
+      diskSize: "50Gi"
       jvm: -Xmx15G -Xms15G
       resources:
         requests:

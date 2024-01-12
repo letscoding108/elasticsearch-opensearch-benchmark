@@ -29,7 +29,7 @@ spec:
           effect: "NoSchedule"
       containers:
         - name: rally
-          image: ugosan/rally-custom:2.8.0-dev
+          image: zhuanggl/rally-custom:2.8.0-dev
           imagePullPolicy: Always
           env:
             - name: HOSTPORT

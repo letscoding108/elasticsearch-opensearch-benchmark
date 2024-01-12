@@ -45,8 +45,11 @@ Go to [this section](./datastreams/elasticsearch.md) and copy and paste to a Kib
 
 ### Install OpenSearch Kubernetes Operator
 ```bash
-helm repo add opensearch-operator https://opster.github.io/opensearch-k8s-operator/
+# helm repo add opensearch-operator https://opster.github.io/opensearch-k8s-operator/
+helm repo add opensearch-operator https://opensearch-project.github.io/opensearch-k8s-operator/
+helm template opensearch-operator opensearch-charts/opensearch-operator
 helm install opensearch-operator opensearch-operator/opensearch-operator
+
 ```
 
 Deploy the OpenSearch Kubernetes Manifest [here](./k8s/opensearch-cluster.yml)

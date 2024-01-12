@@ -23,11 +23,11 @@ data:
 
     [reporting]
     datastore.type = elasticsearch
-    datastore.host = your.elasticsearch-host.cloud.es.io
+    datastore.host = 10.138.0.57
     datastore.port = 9243
     datastore.secure = True
     datastore.user = elastic
-    datastore.password = your-elastic-password
+    datastore.password = 0hILn09cq6mY341ae8r97lQA
 
     [tracks]
     default.url = https://github.com/elastic/rally-tracks
@@ -51,7 +51,7 @@ spec:
     - ReadWriteOnce
   resources:
     requests:
-      storage: 70Gi
+      storage: 30Gi
 ---
 apiVersion: v1
 kind: PersistentVolumeClaim
@@ -62,4 +62,4 @@ spec:
     - ReadWriteOnce
   resources:
     requests:
-      storage: 70Gi
+      storage: 30Gi

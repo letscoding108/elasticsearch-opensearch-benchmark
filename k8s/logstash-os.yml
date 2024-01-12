@@ -8,7 +8,7 @@ spec:
     cloud.google.com/gke-nodepool: rally-nodes
   containers:
   - name: logstash
-    image: ugosan/logstash-custom:8.8.2-dev
+    image: zhuanggl/logstash-custom:8.8.2-dev
     imagePullPolicy: Always
     env: 
       - name: GCP_FILE_MATCH_REGEX
@@ -78,7 +78,7 @@ data:
   big5-benchmark.conf: |
     input {
         google_cloud_storage {
-            bucket_id => "my-benchmarks-datasets"
+            bucket_id => "my-benchmarks-datasets-zgl-0111"
             file_matches => "${GCP_FILE_MATCH_REGEX}"
             processed_db_path => "/tmp/logstash/processed_db"
             codec => json_lines

@@ -33,6 +33,8 @@ resource "google_container_node_pool" "opensearch_nodes_32cpu" {
 	disk_size_gb = 50
   }
 }
+
+
 resource "google_container_node_pool" "rally_nodes" {
   name   	= "rally-nodes"
   cluster	= google_container_cluster.my_cluster.id
